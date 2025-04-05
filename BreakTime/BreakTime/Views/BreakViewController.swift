@@ -13,8 +13,7 @@ class BreakViewController: NSViewController {
     private var postpone10Button: NSButton!
     private var skipBreakButton: NSButton!
     private var buttonContainer: NSView!
-    private var retroFrame: NSView!
-    // Removed scanlineView to fix Metal library issue
+    private var modernFrame: NSView!
     
     weak var delegate: BreakViewControllerDelegate?
     
@@ -34,17 +33,17 @@ class BreakViewController: NSViewController {
     
     private func setupUI() {
         // Create a modern container view
-        retroFrame = NSView()
-        retroFrame.wantsLayer = true
+        modernFrame = NSView()
+        modernFrame.wantsLayer = true
         
         // Use a semi-transparent background that works in both light and dark mode
-        retroFrame.layer?.backgroundColor = NSColor.windowBackgroundColor.withAlphaComponent(0.95).cgColor
-        retroFrame.layer?.cornerRadius = 24.0
-        retroFrame.layer?.shadowOpacity = 0.5
-        retroFrame.layer?.shadowRadius = 20
-        retroFrame.layer?.shadowOffset = CGSize(width: 0, height: -5)
-        retroFrame.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(retroFrame)
+        modernFrame.layer?.backgroundColor = NSColor.windowBackgroundColor.withAlphaComponent(0.95).cgColor
+        modernFrame.layer?.cornerRadius = 24.0
+        modernFrame.layer?.shadowOpacity = 0.5
+        modernFrame.layer?.shadowRadius = 20
+        modernFrame.layer?.shadowOffset = CGSize(width: 0, height: -5)
+        modernFrame.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(modernFrame)
         
         // Message label (main title)
         messageLabel = NSTextField(labelWithString: "Break Time ☕️")
@@ -53,7 +52,7 @@ class BreakViewController: NSViewController {
         messageLabel.alignment = .center
         messageLabel.backgroundColor = .clear
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
-        retroFrame.addSubview(messageLabel)
+        modernFrame.addSubview(messageLabel)
         
         // Subtitle label
         subtitleLabel = NSTextField(labelWithString: "Rest your eyes and stretch")
@@ -62,12 +61,12 @@ class BreakViewController: NSViewController {
         subtitleLabel.alignment = .center
         subtitleLabel.backgroundColor = .clear
         subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        retroFrame.addSubview(subtitleLabel)
+        modernFrame.addSubview(subtitleLabel)
         
         // Create a container for the timer to ensure fixed width
         let timerContainer = NSView()
         timerContainer.translatesAutoresizingMaskIntoConstraints = false
-        retroFrame.addSubview(timerContainer)
+        modernFrame.addSubview(timerContainer)
         
         // Timer label
         timerLabel = NSTextField(labelWithString: "05:00")
@@ -95,7 +94,7 @@ class BreakViewController: NSViewController {
         // Create the button container view
         buttonContainer = NSView()
         buttonContainer.translatesAutoresizingMaskIntoConstraints = false
-        retroFrame.addSubview(buttonContainer)
+        modernFrame.addSubview(buttonContainer)
         
         // Setup the modern button style
         let createModernButton = { (title: String, primary: Bool) -> NSButton in
@@ -134,27 +133,27 @@ class BreakViewController: NSViewController {
         // Layout constraints
         NSLayoutConstraint.activate([
             // Main container positioning
-            retroFrame.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            retroFrame.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            retroFrame.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6),
-            retroFrame.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.7),
+            modernFrame.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            modernFrame.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            modernFrame.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6),
+            modernFrame.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.7),
             
             // Center main content
-            messageLabel.centerXAnchor.constraint(equalTo: retroFrame.centerXAnchor),
-            messageLabel.topAnchor.constraint(equalTo: retroFrame.topAnchor, constant: 60),
+            messageLabel.centerXAnchor.constraint(equalTo: modernFrame.centerXAnchor),
+            messageLabel.topAnchor.constraint(equalTo: modernFrame.topAnchor, constant: 60),
             
-            subtitleLabel.centerXAnchor.constraint(equalTo: retroFrame.centerXAnchor),
+            subtitleLabel.centerXAnchor.constraint(equalTo: modernFrame.centerXAnchor),
             subtitleLabel.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 20),
             
             // Position the timer container
-            timerContainer.centerXAnchor.constraint(equalTo: retroFrame.centerXAnchor),
+            timerContainer.centerXAnchor.constraint(equalTo: modernFrame.centerXAnchor),
             timerContainer.topAnchor.constraint(equalTo: subtitleLabel.bottomAnchor, constant: 40),
             timerContainer.widthAnchor.constraint(equalToConstant: 280), // Fixed width
             timerContainer.heightAnchor.constraint(equalToConstant: 120), // Fixed height
             
             // Position button container
-            buttonContainer.centerXAnchor.constraint(equalTo: retroFrame.centerXAnchor),
-            buttonContainer.bottomAnchor.constraint(equalTo: retroFrame.bottomAnchor, constant: -60),
+            buttonContainer.centerXAnchor.constraint(equalTo: modernFrame.centerXAnchor),
+            buttonContainer.bottomAnchor.constraint(equalTo: modernFrame.bottomAnchor, constant: -60),
             buttonContainer.widthAnchor.constraint(equalToConstant: 400),
             buttonContainer.heightAnchor.constraint(equalToConstant: 120),
             
