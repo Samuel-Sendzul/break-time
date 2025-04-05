@@ -275,14 +275,21 @@ class AppController {
     private var currentSettingsController: SettingsWindowController?
     
     @objc private func showSettings() {
+        // Get current settings
+        let currentSettings = settingsService.loadSettings()
+        
         // Create the settings window controller and store a reference to it
-        currentSettingsController = SettingsWindowController(settings: settingsService.loadSettings()) { [weak self] settings in
+        currentSettingsController = SettingsWindowController(settings: currentSettings) { [weak self] newSettings in
             // Save the new settings
-            self?.settingsService.saveSettings(settings)
-            self?.timerService.updateSettings(settings)
+            self?.settingsService.saveSettings(newSettings)
+            self?.timerService.updateSettings(newSettings)
             
-            // Start a new work timer immediately when settings are saved
-            self?.timerService.startWorkTimer()
+            // Only start a new work timer if the work or break durations changed
+            if newSettings.workDurationMinutes != currentSettings.workDurationMinutes || 
+               newSettings.breakDurationMinutes != currentSettings.breakDurationMinutes {
+                self?.timerService.startWorkTimer()
+            }
+            
             self?.updateStatusBarDisplay()
             
             // Clear the reference when done

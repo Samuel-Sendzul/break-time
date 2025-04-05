@@ -21,7 +21,7 @@ class BreakViewController: NSViewController {
     override func loadView() {
         self.view = EventBlockingView()
         view.wantsLayer = true
-        view.layer?.backgroundColor = NSColor.black.cgColor
+        view.layer?.backgroundColor = NSColor.clear.cgColor
         setupUI()
     }
     

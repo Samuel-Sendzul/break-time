@@ -90,14 +90,8 @@ class OverlayWindowController: NSWindowController {
         // Update timer display
         breakViewController.updateTimer(seconds: remainingSeconds)
         
-        // Ensure we start with fully transparent window
-        overlayWindow.backgroundColor = NSColor.black.withAlphaComponent(0.0)
-        
-        // Animate fade in - use lower opacity (0.7) so user can see screen beneath
-        NSAnimationContext.runAnimationGroup { context in
-            context.duration = 1.0
-            overlayWindow.animator().backgroundColor = NSColor.black.withAlphaComponent(0.7)
-        }
+        // Set window opacity immediately - no fade in
+        overlayWindow.backgroundColor = NSColor.black.withAlphaComponent(0.4)
         
         // Ensure window stays on top during and after animation
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
@@ -125,7 +119,7 @@ class OverlayWindowController: NSWindowController {
         // Get the frame of the active screen
         let visibleFrame = activeScreen.frame
         
-        // Update window frame to cover just the active screen
+        // Update window frame to cover the entire active screen
         overlayWindow.setFrame(visibleFrame, display: true)
     }
     
@@ -135,7 +129,8 @@ class OverlayWindowController: NSWindowController {
         
         // Animate fade out
         NSAnimationContext.runAnimationGroup({ context in
-            context.duration = 1.0
+            context.duration = 2.0  // Slower fade out over 2 seconds
+            context.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
             overlayWindow.animator().backgroundColor = NSColor.black.withAlphaComponent(0.0)
         }, completionHandler: { [weak self] in
             self?.overlayWindow.orderOut(nil)

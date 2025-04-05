@@ -49,7 +49,7 @@ class SettingsWindowController: NSWindowController {
         super.init(window: window)
         
         // Set delegate to handle window closing after super.init
-        window.delegate = self
+        window.delegate = self 
         
         setupUI()
     }
@@ -299,22 +299,10 @@ class SettingsWindowController: NSWindowController {
             }
         }
         
-        // Call the save callback
-        onSave?(newSettings)
-        
-        // Close the window
-        window?.close()
-        
-        // Bring the focus back to the menu bar
-        DispatchQueue.main.async {
-            NSApp.setActivationPolicy(.accessory)
-        }
-        
         // Log to console for debugging
         print("Saving new settings: Work=\(workMinutes)min, Break=\(breakMinutes)min")
-        print("Timer will start immediately with these new settings")
         
-        // Call the save callback - this will also start the timer in AppController
+        // Call the save callback once
         onSave?(newSettings)
         
         // Close the window
