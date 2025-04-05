@@ -295,11 +295,7 @@ class SettingsWindowController: NSWindowController {
             
             // Try to set the login item if the bundle identifier is available
             if let bundleIdentifier = Bundle.main.bundleIdentifier {
-                do {
-                    try SMLoginItemSetEnabled(bundleIdentifier as CFString, startAtLogin)
-                } catch {
-                    print("Error setting login item: \(error)")
-                }
+                SMLoginItemSetEnabled(bundleIdentifier as CFString, startAtLogin)
             }
         }
         

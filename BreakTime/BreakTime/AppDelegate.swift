@@ -28,19 +28,56 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     private func setupLoginItemIfNeeded() {
-        if #available(macOS 13.0, *) {
-            // Modern API is handled by LoginItemService directly
-            return
-        }
+        // Get the user preference for auto-launch
+        let shouldLaunchAtLogin = UserDefaults.standard.bool(forKey: "launchAtLogin")
         
-        // For older macOS versions, use SMLoginItemSetEnabled
-        if let bundleIdentifier = Bundle.main.bundleIdentifier {
-            let shouldLaunchAtLogin = UserDefaults.standard.bool(forKey: "LaunchAtLogin")
+        if #available(macOS 13.0, *) {
+            // Modern API for macOS 13.0+
+            let service = SMAppService.mainApp
+            
+            // First check current status to avoid unnecessary calls
+            let status = service.status
             
             do {
-                try SMLoginItemSetEnabled(bundleIdentifier as CFString, shouldLaunchAtLogin)
+                if shouldLaunchAtLogin && status != .enabled {
+                    // Register only if not already enabled
+                    print("Attempting to register app as login item")
+                    
+                    // This will prompt the user for permission
+                    try service.register()
+                    print("Successfully registered app as login item")
+                } else if !shouldLaunchAtLogin && status == .enabled {
+                    // Unregister only if currently enabled
+                    try service.unregister()
+                    print("Successfully unregistered app as login item")
+                }
             } catch {
                 print("Error setting login item: \(error)")
+                
+                // Show a dialog to the user that explains the error and provides guidance
+                // on how to enable the login item manually from System Preferences
+                let alert = NSAlert()
+                alert.messageText = "Could not set login item automatically"
+                alert.informativeText = "To start BreakTime at login, please add it manually in System Settings → General → Login Items."
+                alert.alertStyle = .informational
+                alert.addButton(withTitle: "OK")
+                alert.runModal()
+            }
+        } else {
+            // For older macOS versions, use SMLoginItemSetEnabled
+            if let bundleIdentifier = Bundle.main.bundleIdentifier {
+                let success = SMLoginItemSetEnabled(bundleIdentifier as CFString, shouldLaunchAtLogin)
+                if !success {
+                    print("Failed to set login item using legacy API")
+                    
+                    // Show guidance for older macOS versions
+                    let alert = NSAlert()
+                    alert.messageText = "Could not set login item automatically"
+                    alert.informativeText = "To start BreakTime at login, please add it manually in System Preferences → Users & Groups → Login Items."
+                    alert.alertStyle = .informational
+                    alert.addButton(withTitle: "OK")
+                    alert.runModal()
+                }
             }
         }
     }
