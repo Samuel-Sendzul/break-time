@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		6942F40E2DA156CF00783E33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6942F3F42DA156CD00783E33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6942F3FB2DA156CD00783E33;
+			remoteInfo = BreakTime;
+		};
+		6942F4182DA156CF00783E33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6942F3F42DA156CD00783E33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6942F3FB2DA156CD00783E33;
+			remoteInfo = BreakTime;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6942F3FC2DA156CD00783E33 /* BreakTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6942F40D2DA156CF00783E33 /* BreakTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreakTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6942F4172DA156CF00783E33 /* BreakTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreakTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		6942F3FE2DA156CD00783E33 /* BreakTime */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BreakTime;
+			sourceTree = "<group>";
+		};
+		6942F4102DA156CF00783E33 /* BreakTimeTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BreakTimeTests;
+			sourceTree = "<group>";
+		};
+		6942F41A2DA156CF00783E33 /* BreakTimeUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BreakTimeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6942F3F92DA156CD00783E33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6942F40A2DA156CF00783E33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6942F4142DA156CF00783E33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6942F3F32DA156CD00783E33 = {
+			isa = PBXGroup;
+			children = (
+				6942F3FE2DA156CD00783E33 /* BreakTime */,
+				6942F4102DA156CF00783E33 /* BreakTimeTests */,
+				6942F41A2DA156CF00783E33 /* BreakTimeUITests */,
+				6942F3FD2DA156CD00783E33 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6942F3FD2DA156CD00783E33 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6942F3FC2DA156CD00783E33 /* BreakTime.app */,
+				6942F40D2DA156CF00783E33 /* BreakTimeTests.xctest */,
+				6942F4172DA156CF00783E33 /* BreakTimeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6942F3FB2DA156CD00783E33 /* BreakTime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6942F4212DA156CF00783E33 /* Build configuration list for PBXNativeTarget "BreakTime" */;
+			buildPhases = (
+				6942F3F82DA156CD00783E33 /* Sources */,
+				6942F3F92DA156CD00783E33 /* Frameworks */,
+				6942F3FA2DA156CD00783E33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				6942F3FE2DA156CD00783E33 /* BreakTime */,
+			);
+			name = BreakTime;
+			packageProductDependencies = (
+			);
+			productName = BreakTime;
+			productReference = 6942F3FC2DA156CD00783E33 /* BreakTime.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6942F40C2DA156CF00783E33 /* BreakTimeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6942F4242DA156CF00783E33 /* Build configuration list for PBXNativeTarget "BreakTimeTests" */;
+			buildPhases = (
+				6942F4092DA156CF00783E33 /* Sources */,
+				6942F40A2DA156CF00783E33 /* Frameworks */,
+				6942F40B2DA156CF00783E33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6942F40F2DA156CF00783E33 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				6942F4102DA156CF00783E33 /* BreakTimeTests */,
+			);
+			name = BreakTimeTests;
+			packageProductDependencies = (
+			);
+			productName = BreakTimeTests;
+			productReference = 6942F40D2DA156CF00783E33 /* BreakTimeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6942F4162DA156CF00783E33 /* BreakTimeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6942F4272DA156CF00783E33 /* Build configuration list for PBXNativeTarget "BreakTimeUITests" */;
+			buildPhases = (
+				6942F4132DA156CF00783E33 /* Sources */,
+				6942F4142DA156CF00783E33 /* Frameworks */,
+				6942F4152DA156CF00783E33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6942F4192DA156CF00783E33 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				6942F41A2DA156CF00783E33 /* BreakTimeUITests */,
+			);
+			name = BreakTimeUITests;
+			packageProductDependencies = (
+			);
+			productName = BreakTimeUITests;
+			productReference = 6942F4172DA156CF00783E33 /* BreakTimeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6942F3F42DA156CD00783E33 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					6942F3FB2DA156CD00783E33 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					6942F40C2DA156CF00783E33 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 6942F3FB2DA156CD00783E33;
+					};
+					6942F4162DA156CF00783E33 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 6942F3FB2DA156CD00783E33;
+					};
+				};
+			};
+			buildConfigurationList = 6942F3F72DA156CD00783E33 /* Build configuration list for PBXProject "BreakTime" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6942F3F32DA156CD00783E33;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 6942F3FD2DA156CD00783E33 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6942F3FB2DA156CD00783E33 /* BreakTime */,
+				6942F40C2DA156CF00783E33 /* BreakTimeTests */,
+				6942F4162DA156CF00783E33 /* BreakTimeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6942F3FA2DA156CD00783E33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6942F40B2DA156CF00783E33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6942F4152DA156CF00783E33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6942F3F82DA156CD00783E33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6942F4092DA156CF00783E33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6942F4132DA156CF00783E33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6942F40F2DA156CF00783E33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6942F3FB2DA156CD00783E33 /* BreakTime */;
+			targetProxy = 6942F40E2DA156CF00783E33 /* PBXContainerItemProxy */;
+		};
+		6942F4192DA156CF00783E33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6942F3FB2DA156CD00783E33 /* BreakTime */;
+			targetProxy = 6942F4182DA156CF00783E33 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6942F41F2DA156CF00783E33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6942F4202DA156CF00783E33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		6942F4222DA156CF00783E33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BreakTime/BreakTime.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BreakTime/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SamuelSendzul.BreakTime;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6942F4232DA156CF00783E33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BreakTime/BreakTime.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BreakTime/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SamuelSendzul.BreakTime;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		6942F4252DA156CF00783E33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SamuelSendzul.BreakTimeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BreakTime.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BreakTime";
+			};
+			name = Debug;
+		};
+		6942F4262DA156CF00783E33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SamuelSendzul.BreakTimeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BreakTime.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BreakTime";
+			};
+			name = Release;
+		};
+		6942F4282DA156CF00783E33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SamuelSendzul.BreakTimeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = BreakTime;
+			};
+			name = Debug;
+		};
+		6942F4292DA156CF00783E33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SamuelSendzul.BreakTimeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = BreakTime;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6942F3F72DA156CD00783E33 /* Build configuration list for PBXProject "BreakTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6942F41F2DA156CF00783E33 /* Debug */,
+				6942F4202DA156CF00783E33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6942F4212DA156CF00783E33 /* Build configuration list for PBXNativeTarget "BreakTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6942F4222DA156CF00783E33 /* Debug */,
+				6942F4232DA156CF00783E33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6942F4242DA156CF00783E33 /* Build configuration list for PBXNativeTarget "BreakTimeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6942F4252DA156CF00783E33 /* Debug */,
+				6942F4262DA156CF00783E33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6942F4272DA156CF00783E33 /* Build configuration list for PBXNativeTarget "BreakTimeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6942F4282DA156CF00783E33 /* Debug */,
+				6942F4292DA156CF00783E33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6942F3F42DA156CD00783E33 /* Project object */;
+}
