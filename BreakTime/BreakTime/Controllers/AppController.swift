@@ -162,6 +162,14 @@ class AppController {
             name: Notification.Name("SkipBreakRequested"),
             object: nil
         )
+        
+        // Observe settings window close requests
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(stopTimer),
+            name: Notification.Name("StopTimerOnSettingsClosed"),
+            object: nil
+        )
     }
     
     @objc private func statusItemClicked() {
@@ -280,16 +288,22 @@ class AppController {
         
         // Create the settings window controller and store a reference to it
         currentSettingsController = SettingsWindowController(settings: currentSettings) { [weak self] newSettings in
+            // Debug - print the new settings
+            print("Received new settings - Work: \(newSettings.workDurationMinutes), Break: \(newSettings.breakDurationMinutes)")
+            
             // Save the new settings
             self?.settingsService.saveSettings(newSettings)
-            self?.timerService.updateSettings(newSettings)
             
-            // Only start a new work timer if the work or break durations changed
-            if newSettings.workDurationMinutes != currentSettings.workDurationMinutes || 
-               newSettings.breakDurationMinutes != currentSettings.breakDurationMinutes {
-                self?.timerService.startWorkTimer()
+            // Explicitly reload settings from storage to verify they were saved
+            let reloadedSettings = self?.settingsService.loadSettings()
+            print("Reloaded settings - Work: \(reloadedSettings?.workDurationMinutes ?? 0), Break: \(reloadedSettings?.breakDurationMinutes ?? 0)")
+            
+            // Update the timer service with the reloaded settings to ensure we're using what was saved
+            if let reloaded = reloadedSettings {
+                self?.timerService.updateSettings(reloaded)
             }
             
+            // Update the display but don't auto-start the timer
             self?.updateStatusBarDisplay()
             
             // Clear the reference when done

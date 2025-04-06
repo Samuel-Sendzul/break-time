@@ -46,7 +46,7 @@ class BreakViewController: NSViewController {
         view.addSubview(modernFrame)
         
         // Message label (main title)
-        messageLabel = NSTextField(labelWithString: "Break Time ☕️")
+        messageLabel = NSTextField(labelWithString: "BreakTime ☕️")
         messageLabel.font = NSFont.systemFont(ofSize: 48, weight: .bold)
         messageLabel.textColor = NSColor.labelColor
         messageLabel.alignment = .center
