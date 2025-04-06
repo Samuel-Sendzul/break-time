@@ -17,7 +17,7 @@ struct SettingsView: View {
     @Environment(\.presentationMode) var presentationMode
     
     // Common work durations in minutes
-    private let workDurationOptions = [1, 15, 20, 25, 30, 45, 50, 60, 90]
+    private let workDurationOptions = [15, 20, 25, 30, 45, 50, 60, 90]
     
     // Common break durations in minutes
     private let breakDurationOptions = [5, 10, 15, 20, 30]
